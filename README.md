@@ -104,7 +104,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | --- | --- |
 |Question | How can we represent the system in an **architecture diagram**, which gives information both about the Docker containers, the communication protocols and the commands? |
-| | *Insert your diagram here...* |
+| | ![image](images/Orchestra_diagram.png) |
 |Question | Who is going to **send UDP datagrams** and **when**? |
 | | The musicians will send the UDP datagrams every second |
 |Question | Who is going to **listen for UDP datagrams** and what should happen when a datagram is received? |
@@ -132,7 +132,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | In Node.js, how can we execute a function on a **periodic** basis? |
 | | We can use `setInterval(fn, time)` |
 |Question | In Node.js, how can we **emit UDP datagrams**? |
-| | We can use `dgram` and create a `upd4` socket with it  |
+| | We can use `dgram` and create a `upd4` socket with it. We can then use the send method.  |
 |Question | In Node.js, how can we **access the command line arguments**? |
 | | We can access them via the `process.argv` variable  |
 
@@ -162,7 +162,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | With Node.js, how can we listen for UDP datagrams in a multicast group? |
 | | Use `dgram` and create a `upd4` socket like the sender. set the socket as broadcast, set the multicast TTL and add the membership toa multicast address. We can then bind the socket to the UDP port and our address.  |
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
-| |  |
+| | We can use it to map each instrument to a corresponding sound. |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
 | | We can use it to write the timestamp for the musicians as well as substracting two dates to tell us the time between them. |
 |Question | When and how do we **get rid of inactive players**?  |
@@ -176,7 +176,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we validate that the whole system works, once we have built our Docker image? |
-| | We can validate the system by starting multiple musicians and an auditor. We check if all the musicians apear on the rcp response from the auditor, then we kill musicians and wait 5 seconds for the ausitor to update the tcp repsonse. We repeat this process multiple times(here 4). |
+| | We can validate the system by starting multiple musicians and an auditor. We check if all the musicians appear on the tcp response from the auditor, then we kill musicians and wait 5 seconds for the auditor to update the tcp response. We repeat this process multiple times(here 4). |
 
 
 ## Constraints
